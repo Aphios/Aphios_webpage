@@ -30,6 +30,7 @@ body {
 	
 .imgflottantedroite {
 	float : right;
+	/* TODO : tailles ne fonctionnent pas ? */
 	width : 100px;
 	height : 100px;
 
