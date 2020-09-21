@@ -1,0 +1,4 @@
+Titles : Rothenburg decorative
+Subtitles : Neris semibold italic
+Texts : Neris light
+Fantasy fight page : titles : Immortal
