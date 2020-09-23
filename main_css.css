@@ -32,59 +32,86 @@ Par Sophie Blanchard
 	font-style:normal;
 }
 
+#page{
+	width: 80%;
+	max-width:1280px;
+	min-width:700px;
+}
+
 #en-tete {
+	display : flex;
+	/*TODO : espacer les blocs */
 }
 
 .titre{
 	font-family:"Rothenburg";
-	font-size: 82px;
+	font-size: 7em;
+    color: #140454;
 }
 
 .logo{
-	/* TODO : tailles ne fonctionnent pas ? */
-	width:50px;
-	height:50px;
+	width:30%;
+	/*TODO : gérer taille de l'image (width gère taille du bloc mais l'img se met dedans à 100%)*/
 }
 
 .banniere{
-	/* TODO : tailles ne fonctionnent pas ? */
-	width:728px;
+	/* TODO : idem revoir taille */
+	width : 90%;
+	background-color: #989fff;
 }
 
 #menu {
+	display : flex;
+	width:90%
+	/*TODO : ajouter espaces entre les blocs et étirer sur toute largeur page*/
 }
 
 .categ_menu{
 	font-family: "Neris semibold italic";
-	font-size : 18px;
+	font-size : 1.4em;
+	color : #140454;
+	background-color: #76cd9b;
 }
 
 #bas_page{
+	background-color: #e8e8e8;
+	display: flex;
+	/*TODO espacer blocs */
 }
 
 .categ_barre_inf{
+	display : flex;
 	font-family: "Neris light";
-	font-size:14px;
+	font-size:0.9em;
+}
+
+.categ_barre_inf p {
+	font-family:"Neris light";
+	font-size:0.9em;
 }
 
 h1{
 	font-family:"Rothenburg";
-	font-size: 48px;
+	font-size: 4em;
+	color: #140454;
 }
 
 h2 {
 	font-family: "Neris semibold italic";
-	font-size: 18px;
+	font-size: 1.5em;
 }
 
 p{
 	font-family:"Neris light";
-	font-size:14px;
+	font-size:1.1em;
 }
 
 ul{
 	font-family:"Neris light";
-	font-size: 14px;
+	font-size: 1em;
+}
+
+a {
 }
 
 a : hover{
