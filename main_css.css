@@ -32,15 +32,15 @@ Par Sophie Blanchard
 	font-style:normal;
 }
 
-#page{
-	width: 80%;
+body{
+	width: 100%;
 	max-width:1280px;
 	min-width:700px;
+	margin:auto;
 }
 
 #en-tete {
 	display : flex;
-	/*TODO : espacer les blocs */
 }
 
 .titre{
@@ -51,43 +51,113 @@ Par Sophie Blanchard
 
 .logo{
 	width:30%;
-	/*TODO : gérer taille de l'image (width gère taille du bloc mais l'img se met dedans à 100%)*/
+	height:auto;
 }
 
+.logo img {
+	width :55%;
+	height:auto;
+}
+
+
 .banniere{
-	/* TODO : idem revoir taille */
-	width : 90%;
 	background-color: #989fff;
 }
 
-#menu {
+.banniere img{
+	width : 100%;
+	height:auto;
+}
+
+nav {
 	display : flex;
-	width:90%
-	/*TODO : ajouter espaces entre les blocs et étirer sur toute largeur page*/
+	width:100%;
+	height:3.5em;
+	background-color: #989fff;
+	border-radius: 0em 0 0.5em 0.5em;
 }
 
 .categ_menu{
 	font-family: "Neris semibold italic";
 	font-size : 1.4em;
 	color : #140454;
-	background-color: #76cd9b;
+	width:100%;
+	text-align:center;
+	margin-top:0.4em;
 }
 
-#bas_page{
+.categ_menu a{
+	text-decoration:none;
+	color : #140454;
+}
+
+section{
+	display:flex;
+}
+
+article{
+	margin-right:2em;
+}
+
+
+aside {
+	background-color : #e8e8e8;
+	width:35%;
+	border-radius: 0.3em;
+	margin-top : 2.5em;
+	padding:1.2em;
+}
+
+aside p{
+	font-size:1em;
+}
+
+aside a{
+	font-size:1em;
+	text-decoration:none;
+	color:#140454;
+}
+
+aside ul{
+	list-style:none;
+}
+
+aside ul li:before {
+	content: "- ";
+    color: #140454;
+    font-size: 1.5em;
+	font-family:"Rothenburg";
+}
+
+footer{
 	background-color: #e8e8e8;
 	display: flex;
-	/*TODO espacer blocs */
+	margin-top:1.2em;
+	width:100%;
+	height:2.5em;
+	border-radius:0.3em;
 }
 
 .categ_barre_inf{
 	display : flex;
+	width:100%;
 	font-family: "Neris light";
 	font-size:0.9em;
+	text-align:center;
+	justify-content:center;
 }
 
 .categ_barre_inf p {
 	font-family:"Neris light";
 	font-size:0.9em;
+	margin-top:1em;
+}
+
+.categ_barre_inf a{
+	font-size:0.9em;
+	text-decoration:none;
+	color:#000000;
+	margin-top : 1em;
 }
 
 h1{

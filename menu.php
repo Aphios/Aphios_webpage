@@ -1,7 +1,5 @@
 <!--Menu -->
-		<div id="menu">
-		    <div class="categ_menu"><a href="mainpage.html">Accueil</a></div>
-			<div class="categ_menu"><a href="mes_projets.html">Mes projets</a></div>
-			<div class="categ_menu"><a href="cv.html">CV</a></div>
-			<div class="categ_menu"><a href="contact.html">Contact</a></div>			
-		</div>
+		    <div class="categ_menu"><a href="mainpage.php">Accueil</a></div>
+			<div class="categ_menu"><a href="mes_projets.php">Mes projets</a></div>
+			<div class="categ_menu"><a href="cv.php">CV</a></div>
+			<div class="categ_menu"><a href="contact.php">Contact</a></div>			
