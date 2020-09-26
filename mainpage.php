@@ -7,25 +7,15 @@
 	    <title>Aphios website</title>
     </head>
 	
+	<body>
 	<div id="page">
 	
 	<header>
-	    <!-- Titre + logo + bannière -->
-	    <div id= "en-tete">
-		    <div class = "logo"><img src="Images/FF_logo.png" alt="Logo Aphios website"/></div>
-		    <div class = "titre">Aphios website</div>
-	    </div>
-		<div class = "banniere"><img src="Images/banniere_site.png" alt="Bannière du site"/></div>
+	    <?php include("en_tete.php"); ?>
 	</header>
 	
 	<nav>
-	    <!--Menu -->
-		<div id="menu">
-		    <div class="categ_menu"><a href="mainpage.html">Accueil</a></div>
-			<div class="categ_menu"><a href="mes_projets.html">Mes projets</a></div>
-			<div class="categ_menu"><a href="cv.html">CV</a></div>
-			<div class="categ_menu"><a href="contact.html">Contact</a></div>			
-		</div>
+	    <?php include("menu.php"); ?>
 	</nav>
 	
 	<section>
@@ -63,14 +53,10 @@
 	</section>
 	
 	<footer>
-	    <!-- Mentions légales + plan du site + copyright -->
-		<div id="bas_page">
-		    <div class="categ_barre_inf"><a href="mentions_legales.html">Mentions légales</a></div>
-			<div class="categ_barre_inf"><a href="plan_site.html">Plan du site</a></div>
-			<div class="categ_barre_inf"><p>&copy; Sophie Blanchard 2020</p></div>
-		</div>		
+	    <?php include("bas_page.php"); ?>
 	</footer>
 	
 	</div>
+	</body>
 	
 </html>

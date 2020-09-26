@@ -8,12 +8,17 @@
     </head>
 	
     <body>
+	
+	<header>
+	     <?php include("en_tete.php"); ?>
+		 <?php include("menu.php"); ?>
+	</header>
+	
 	    <h1>Présentation</h1>
 		    <h2>Qui suis-je ?</h2>
 			    <p><span class="pseudo">Aphios</span>, de mon vrai nom <strong>Sophie Blanchard</strong>.<br /> Je suis une autodidacte en
 				développement informatique et j'entame une reconversion pour devenir développeuse web.</p>
 			<h2>Le projet Fantasy Fight</h2>
-			    <p><img src="Images/FF_logo.png" class="imgflottantedroite" alt="Logo Fantasy Fight" /></p>
 			    <p><em>Fantasy Fight</em> est mon <mark>premier projet</mark> autonome. Il s'agit d'un jeu de combat
 				old-school développé avec Python 3 et Pygame. On y incarne un héros de <a href="#game">fantasy</a> prêt à combattre des ennemis.</p>
 				<p class="dessous">Le jeu propose une interface graphique en 2D avec musique et sons. J'ai créé l'ensemble des éléments graphiques.</p>
@@ -37,6 +42,10 @@
 				<li>Illithid</li>
 				<li>Rakshasa</li>
 			</ul>
+			
+	    <footer>
+		    <?php include("bas_page.php"); ?>
+		</footer>
 				    
     </body>
 </html>
