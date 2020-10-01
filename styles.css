@@ -70,6 +70,14 @@ p{
 ul{
 	font-family:"Neris light";
 	font-size: 1em;
+	list-style:none;
+}
+
+ul li:before {
+	content: "- ";
+    color: #140454;
+    font-size: 1.5em;
+	font-family:"Rothenburg";
 }
 
 a {
@@ -77,9 +85,10 @@ a {
 	color:#140454;
 }
 
-a: visited {
+a:visited {
 	text-decoration:none;
-	color: #76cd9b;
+	color: #bc007d;
+	font-style: italic;
 }
 
 mark{
@@ -88,6 +97,30 @@ mark{
 	font-weight:bold;
 }
 
+/* Mainpage */
+
+article{
+	margin-right:2em;
+}
+
+
+aside {
+	background-color : #e8e8e8;
+	width:35%;
+	border-radius: 0.3em;
+	margin-top : 2.5em;
+	padding:1.2em;
+}
+
+aside p{
+	font-size:1em;
+}
+
+aside a{
+	font-size:1em;
+	text-decoration:none;
+	color:#140454;
+}
 
 /* En-tête */
 
@@ -145,41 +178,6 @@ nav {
 	border-radius: 0em 0 0.5em 0.5em;
 }
 
-/* Mainpage */
-
-article{
-	margin-right:2em;
-}
-
-
-aside {
-	background-color : #e8e8e8;
-	width:35%;
-	border-radius: 0.3em;
-	margin-top : 2.5em;
-	padding:1.2em;
-}
-
-aside p{
-	font-size:1em;
-}
-
-aside a{
-	font-size:1em;
-	text-decoration:none;
-	color:#140454;
-}
-
-aside ul{
-	list-style:none;
-}
-
-aside ul li:before {
-	content: "- ";
-    color: #140454;
-    font-size: 1.5em;
-	font-family:"Rothenburg";
-}
 
 /* Bas de page */
 
@@ -266,5 +264,116 @@ input[type=submit] {
 
 #mail {
 	margin-left : 1.5em;
+}
+
+/*CV*/
+
+hr{
+	border: none;
+	border-top: 0.1em inset #bc007d;
+	width:80%;
+	height: 1em;
+	overflow:visible;
+	text-align:right;
+	justify-content:center;
+}
+
+hr:after{
+	background: #fff;
+	content:' X ';
+	position:relative;
+	top:-0.9em;
+	font-family:"Rothenburg";
+	font-size:1.2em;
+}
+
+#cv_body{
+	display:flex;
+	width:80%;
+	/*TODO : aligner centre page */
+}
+
+#cv_body h3{
+}
+
+
+#cv_left, #cv_right{
+	display:flex;
+	flex-direction:column;
+}
+
+#cv_left{
+	background-color:#e6ccff;
+	border-radius:1em;
+	padding:1em;
+	width:20%;
+	height : auto;
+}
+
+#cv_left li{
+	
+}
+
+#cv_left h3{
+	padding-left: 0em;
+}
+
+#cv_right{
+	width:80%;
+	height:auto;
+	padding:2em;
+	margin:1em;
+}
+
+#cv_right li{
+}
+
+#cv_right h3{
+	padding-left: 0em;
+}
+
+#cv_right h4{
+	font-family: "Neris light";
+	color:#360465;
+	margin-bottom:0em;
+	margin-top:0.5em;
+}
+#cv_right p{
+	margin-top:0.2em;
+	margin-bottom : 1em;
+}
+#cv_top{
+	display:flex;
+	width:80%;
+	/*TODO : aligner centre page */
+}
+
+#cv_intro{
+	display:block;
+	margin-left:2.5em;
+	padding-top:3.8em;
+}
+
+#cv_intro h2{
+	font-size:2em;
+	color: #140454;
+	margin-bottom : 0.4em;
+	margin-top: 0.5em;
+}
+
+#cv_intro h3{
+	color :#360465;
+	font-size:1.5em;
+	margin-bottom : 0.5em;
+	margin-top:0em;
+	padding-left:0em;
+}
+
+#cv_intro p{
+	font-style:oblique;
+	font-size:0.9em;
+	margin-top : 0.2em;
+	margin-bottom: 0.2em;
+	
 }
 
