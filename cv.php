@@ -34,7 +34,7 @@
 	    <section id="cv_left">
 	        <article>
 		        <h3>Contact</h3>
-		    	<p>aphios.web@gmail.com</p>
+		    	<p><a href="mailto:aphios.web@gmail.com">aphios.web@gmail.com</a></p>
 		    </article>
 		
 		    <article>
@@ -69,13 +69,13 @@
 		       <ul>
 		           <li>HTML & CSS</li>
 			       <li>PHP</li>
-			       <li>SQL</li>
+			       <li>MySQL</li>
 			       <li>Python</li>
 			       <li>Wordpress</li>
 			       <li>Java</li>
+				   <li>Git</li>
 			       <li>Photoshop</li>
 			       <li>Indesign</li>
-			       <li>Git</li>
 			       <li>Scrum</li>
 			    </ul>
 		    </article>
