@@ -156,26 +156,65 @@ aside a{
 
 /* Menu */
 
-.categ_menu{
+.menu{
+	list-style:none;
+	display:flex;
+	margin-top:0em;
+	margin-bottom:0em;
+}
+
+.menu li{
 	font-family: "Neris semibold italic";
 	font-size : 1.4em;
 	color : #140454;
 	width:100%;
 	text-align:center;
 	margin-top:0.4em;
+	position:relative;	
+	/* flex: 1 1 auto; */
 }
 
-.categ_menu a{
+.menu li:before{
+	content: none;
+}
+	
+.menu a{
 	text-decoration:none;
 	color : #140454;
 }
 
 nav {
-	display : flex;
 	width:100%;
 	height:3.5em;
 	background-color: #989fff;
 	border-radius: 0em 0 0.5em 0.5em;
+	/* position:sticky; */
+}
+
+.sous_menu{
+	display:none;
+	background-color: #989fff;
+    position: relative;
+	left:2em;
+    width: 60%;
+    z-index: 1000;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+
+nav > ul li:hover .sous_menu{
+    display: flex;
+    flex-flow: column wrap;
+}
+.sous_menu li{
+    font-size:0.9em;
+	text-align: left;
+	width:80%;
+	padding-bottom:1em;
+	padding-top:0.5em;
+	border-bottom-style:solid;
+	border-bottom-width:0.1em;
+	border-bottom-color:#4e24f5;
 }
 
 
@@ -264,6 +303,13 @@ input[type=submit] {
 
 #mail {
 	margin-left : 1.5em;
+}
+
+.msg_form {
+	text-align:center;
+	font-size:1.2em;
+	color:#591d39;
+	margin : 1em;
 }
 
 /*CV*/
