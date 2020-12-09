@@ -13,6 +13,15 @@
 	<nav>
 	    <?php include("menu.php"); ?>
 	</nav>
+	
+<!-- TODO Base de données :
+- Créer  le lien vers la bdd locale aphios_web_contacts
+- Récupérer et vérifier les données du formulaire (créer une fonction estPrésente et une fonction estValide)
+- Si les données [nom, prenom,] mail existent et sont valides mais ne sont pas dans la base, insérer nouvelle ligne dans Personnes
+- Si dans Personnes le mail existe déjà, faire un simple update du nom et du prénom (s'ils ont été renseignés)
+- Si les données [nature demande], message existent et sont valides, insérer une nouvelle ligne dans Messages
+- Afficher le message déjà écrit ci-dessous + "votre message n°{messages.id} a bien été enregistré"
+-->
 
 <?php
     if (isset($_POST['prenom']) and (strlen($_POST['prenom'])>0)){

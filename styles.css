@@ -197,7 +197,7 @@ nav {
     position: relative;
 	left:2em;
     width: 60%;
-    z-index: 1000;
+    z-index: 10;
 	padding-top:1em;
 	padding-bottom:1em;
 }
@@ -252,7 +252,7 @@ footer{
 }
 
 /*Fantasy fight presentation */
-.galerie{
+.miniature{
 	width:50%;
 	height:auto;
 }
@@ -262,12 +262,103 @@ figure img{
 	height:auto;
 }
 
+figure img:hover{
+	cursor:zoom-in;
+}
+
 figcaption{
 	font-family: "Neris light";
 	font-size: 0.9em;
 	text-align:center;
 	width:50%;
 	height:auto;
+}
+
+#lightbox{
+	display:none;
+	position: fixed;
+    z-index: 100;
+    padding: 5vh 10vw;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(66, 56, 77);
+}
+
+.prev, .next, .close{
+	cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 5em;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+	font-size: 20em;
+	font-family:"Neris light";
+    transition: 0.6s ease;
+	border-radius: 0 0.2em 0.2em 0;
+	/*Pour qu'on ne puisse pas sélectionner le texte du bouton*/
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.previous:hover, .next:hover {
+  background-color: rgba(153, 153, 153, 0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 0.2em 0 0 0.2em;
+}
+
+.close{
+	color: white;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 25em;
+    font-weight: bold;
+}
+    
+.close:hover, .close:focus {
+    color: rgb(153, 153, 153);
+    cursor: pointer;
+}
+
+.lightbox_conteneur{
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: none;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.diaporama{
+	display:none;
+}
+
+.diapositive{
+	width:100%;
+}
+
+.dots{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dot_col{
+	width:33%;
+	font-size:15em;
+	color:white;
+	font-weight:bold;
+	font-family:"Neris light";
 }
 
 /*Contact */

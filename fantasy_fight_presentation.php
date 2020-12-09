@@ -40,10 +40,6 @@
 				ce fichier</a> et de l'exécuter en double-cliquant dessus.</p>
 			    <p>Une version anglaise est aussi disponible <a href="https://github.com/Aphios/Fantasy_fight/blob/master/fantasy_fight_en.zip" target="blank">
 				ici.</a></p>
-				<figure class="galerie">
-                    <img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
-                    <figcaption>Screenshot du jeu Fantasy Fight</figcaption>
-                </figure>	
 	    </article>
 	
 	    <aside>
@@ -56,10 +52,40 @@
 	    </aside>
 	
 	</section>
+
+	<section id="galerie">
+	    <figure class="miniature">
+            <img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
+            <figcaption>Screenshots du jeu Fantasy Fight</figcaption>
+        </figure>
+
+		<div id="lightbox">
+		    <button class="prev">&#10094;</button>
+		    <button class="next">&#10095;</button>
+		    <button class="close">&times;</button>
+
+			<div class="lightbox_conteneur">
+			    <div class="diaporama">
+				    <img class="diapositive" src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
+					<img class="diapositive" src="Images/ce_ff_003.png" alt="Image du jeu Fantasy Fight" />
+					<img class="diapositive" src="Images/ce_ff_004.png" alt="Image du jeu Fantasy Fight" />
+				</div>
+			</div>
+
+			<div class="dots">
+			    <span class="dot_col">&bull;</span>
+			    <span class="dot_col">&bull;</span>
+			    <span class="dot_col">&bull;</span>
+			</div>
+
+		</div>	
+	</section>
 			
 	<footer>
 		<?php include("bas_page.php"); ?>
-    </footer>
+	</footer>
+	
+	<script src="aphioswebscript.js"></script>
 				    
     </body>
 </html>
