@@ -339,12 +339,9 @@ figcaption{
     max-width: 1000px;
 }
 
-.diaporama{
-	display:none;
-}
-
 .diapositive{
 	width:100%;
+	display:none;
 }
 
 .dots{

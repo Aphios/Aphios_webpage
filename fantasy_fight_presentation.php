@@ -60,24 +60,26 @@
         </figure>
 
 		<div id="lightbox">
-		    <button class="prev">&#10094;</button>
-		    <button class="next">&#10095;</button>
-		    <button class="close">&times;</button>
+		
+			<button class="close">&times;</button>
 
 			<div class="lightbox_conteneur">
+
+				<button class="prev">&#10094;</button>
+		    	<button class="next">&#10095;</button>
+
 			    <div class="diaporama">
 				    <img class="diapositive" src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
 					<img class="diapositive" src="Images/ce_ff_003.png" alt="Image du jeu Fantasy Fight" />
 					<img class="diapositive" src="Images/ce_ff_004.png" alt="Image du jeu Fantasy Fight" />
 				</div>
+				
+				<div class="dots">
+			    	<span class="dot_col">&bull;</span>
+			   	    <span class="dot_col">&bull;</span>
+			    	<span class="dot_col">&bull;</span>
+				</div>
 			</div>
-
-			<div class="dots">
-			    <span class="dot_col">&bull;</span>
-			    <span class="dot_col">&bull;</span>
-			    <span class="dot_col">&bull;</span>
-			</div>
-
 		</div>	
 	</section>
 			
