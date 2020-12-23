@@ -59,35 +59,26 @@
             <figcaption>Screenshots du jeu Fantasy Fight</figcaption>
         </figure>
 
-		<div id="lightbox">
-		
-			<button class="close">&times;</button>
-
-			<div class="lightbox_conteneur">
-
-				<button class="prev">&#10094;</button>
-		    	<button class="next">&#10095;</button>
-
-			    <div class="diaporama">
-				    <img class="diapositive" src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
-					<img class="diapositive" src="Images/ce_ff_003.png" alt="Image du jeu Fantasy Fight" />
-					<img class="diapositive" src="Images/ce_ff_004.png" alt="Image du jeu Fantasy Fight" />
-				</div>
-				
-				<div class="dots">
-			    	<span class="dot_col">&bull;</span>
-			   	    <span class="dot_col">&bull;</span>
-			    	<span class="dot_col">&bull;</span>
-				</div>
-			</div>
-		</div>	
 	</section>
+
+	<div id="lightbox">
+		<span id="quit">&times;</span>
+	    <div id="diaporama">
+			<img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
+			<img src="Images/ce_ff_003.png" alt="Image du jeu Fantasy Fight" />
+			<img src="Images/ce_ff_004.png" alt="Image du jeu Fantasy Fight" />
+		</div>
+		<div id="controls">
+			<span id="previous">&#10094;</span>
+			<span id="next">&#10095;</span>
+		</div>
+	</div>
 			
 	<footer>
 		<?php include("bas_page.php"); ?>
 	</footer>
 	
-	<script src="aphioswebscript.js"></script>
+	<script src="ff_lightbox.js"></script>
 				    
     </body>
 </html>
