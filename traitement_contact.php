@@ -13,6 +13,8 @@
 	<nav>
 	    <?php include("menu.php"); ?>
 	</nav>
+
+	<div id="inner">
 	
 <!-- TODO Base de données :
 - Créer  le lien vers la bdd locale aphios_web_contacts
@@ -31,7 +33,9 @@
 		echo "<p class='msg_form'>Bonjour, votre message a bien été transmis et sera traité dans les plus brefs délais.</p>";
 	}
 ?>
-<footer>
+    </div>
+
+    <footer>
 		<?php include("bas_page.php"); ?>
     </footer>
 </body>

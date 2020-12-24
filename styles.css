@@ -34,11 +34,16 @@ Par Sophie Blanchard
 	font-style:normal;
 }
 
+*{
+	box-sizing: border-box;
+}
+
 body{
 	width: 100%;
 	max-width:1280px;
 	min-width:700px;
 	margin:auto;
+	font-size: 16px;
 }
 
 section{
@@ -47,36 +52,36 @@ section{
 
 h1{
 	font-family:"Rothenburg";
-	font-size: 4em;
+	font-size: 2.5rem;
 	color: #140454;
 }
 
 h2 {
 	font-family: "Neris semibold italic";
-	font-size: 1.5em;
+	font-size: 1.6rem;
 }
 
 h3 {
 	font-family: "Neris semibold italic";
-	font-size: 1.3em;
+	font-size: 1.4rem;
 	padding-left:0.5em;
 }
 
 p{
 	font-family:"Neris light";
-	font-size:1.1em;
 }
 
 ul{
 	font-family:"Neris light";
-	font-size: 1em;
 	list-style:none;
+	margin:0;
+	padding:0.2em 0.2em 0.2em 0.4em;
 }
 
 ul li:before {
 	content: "- ";
     color: #140454;
-    font-size: 1.5em;
+    font-size: 1.2rem;
 	font-family:"Rothenburg";
 }
 
@@ -97,6 +102,11 @@ mark{
 	font-weight:bold;
 }
 
+#inner{
+	width:80%;
+	margin:auto;
+}
+
 /* Mainpage */
 
 article{
@@ -109,15 +119,15 @@ aside {
 	width:35%;
 	border-radius: 0.3em;
 	margin-top : 2.5em;
-	padding:1.2em;
+	padding : 0.2em 1.2em 1.2em 1.2em;
 }
 
 aside p{
-	font-size:1em;
+	font-size:0.9em;
 }
 
 aside a{
-	font-size:1em;
+	font-size:0.9rem;
 	text-decoration:none;
 	color:#140454;
 }
@@ -126,33 +136,29 @@ aside a{
 
 #en-tete {
 	display : flex;
+	height: 100px;
 }
 
 .titre{
 	font-family:"Rothenburg";
-	font-size: 7em;
+	font-size: 3.2rem;
     color: #140454;
 }
 
 .logo{
-	width:30%;
 	height:auto;
+	padding-top: 1.5em;
+	padding-right: 1.5em;
 }
-
-.logo img {
-	width :55%;
-	height:auto;
-}
-
 
 .banniere{
 	background-color: #989fff;
 }
 
-.banniere img{
-	width : 100%;
-	height:auto;
-}
+/*.banniere img{
+	width: 100%;
+	height: auto;
+}*/
 
 /* Menu */
 
@@ -165,7 +171,7 @@ aside a{
 
 .menu li{
 	font-family: "Neris semibold italic";
-	font-size : 1.4em;
+	font-size : 1.2rem;
 	color : #140454;
 	width:100%;
 	text-align:center;
@@ -185,21 +191,20 @@ aside a{
 
 nav {
 	width:100%;
-	height:3.5em;
+	height:3em;
 	background-color: #989fff;
 	border-radius: 0em 0 0.5em 0.5em;
-	/* position:sticky; */
 }
 
 .sous_menu{
 	display:none;
 	background-color: #989fff;
     position: relative;
-	left:2em;
+	left:3.4em;
     width: 60%;
     z-index: 2;
-	padding-top:1em;
-	padding-bottom:1em;
+	padding: 0.5em 0.5em 1em 2em;
+	border-radius: 0.3em;
 }
 
 nav > ul li:hover .sous_menu{
@@ -207,8 +212,8 @@ nav > ul li:hover .sous_menu{
     flex-flow: column wrap;
 }
 .sous_menu li{
-    font-size:0.9em;
 	text-align: left;
+	font-size: 1.1rem;
 	width:80%;
 	padding-bottom:1em;
 	padding-top:0.5em;
