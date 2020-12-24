@@ -62,16 +62,16 @@
 	</section>
 
 	<div id="lightbox">
-		<span id="quit">&times;</span>
 	    <div id="diaporama">
+		    <span id="quit">&times;</span>
 			<img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
 			<img src="Images/ce_ff_003.png" alt="Image du jeu Fantasy Fight" />
 			<img src="Images/ce_ff_004.png" alt="Image du jeu Fantasy Fight" />
-		</div>
-		<div id="controls">
-			<span id="previous">&#10094;</span>
-			<span id="next">&#10095;</span>
-		</div>
+			<div id="controls">
+			    <span id="previous">&#10094;</span>
+			    <span id="next">&#10095;</span>
+            </div>
+		</div>	
 	</div>
 			
 	<footer>

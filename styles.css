@@ -287,25 +287,31 @@ figcaption{
 
 #lightbox.active{
 	display:flex;
-	flex-direction: column;
 	justify-content: center;
+	align-items:center;
 }
 
 #diaporama{
-	align-self:center;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width:700px;
+	height:600px;
 }
 
 #diaporama img{
 	display:none;
-	width:70%;
 	margin:auto;
+	height:85%;
+	width:auto;
 }
 
 #diaporama img.active{
 	display: block;
 	border-style: inset;
 	border-width: 5px;
-	border-color:rgb(32, 30, 34);
+	border-color:rgb(181, 168, 174);
 }
 
 #quit, #next, #previous{
@@ -322,8 +328,11 @@ figcaption{
 	width:35px;
 	height:35px;
 	text-align:center;
-	margin:auto;
 	line-height:35px;
+}
+
+#quit{
+	align-self:flex-end;
 }
 
 #quit:hover, #next:hover, #previous:hover{
@@ -333,13 +342,9 @@ figcaption{
 
 #controls{
 	display:flex;
-	justify-content:space-around;
-}
-
-#quit{
-	position:fixed;
-	top:100px;
-	left:800px;
+	flex-direction: row;
+	justify-content: space-between;
+	width:700px;
 }
 
 /*Contact */
