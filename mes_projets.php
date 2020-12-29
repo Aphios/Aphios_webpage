@@ -21,7 +21,7 @@
 	
 		<h1>Mes projets</h1>
 		<h3><a href="fantasy_fight_presentation.php">Fantasy Fight</a>, un jeu PC développé en Python.</h3>
-		<h3>Et bien sûr <a href="aphios_website_presentation.php">ce site</a>, développé avec HTML5, CSS3, MySQL et PHP.</h3>
+		<h3>Et bien sûr <a href="aphios_website_presentation.php">ce site</a>, développé avec HTML5, CSS3, Javascript, MySQL et PHP.</h3>
 	
     </div>
 

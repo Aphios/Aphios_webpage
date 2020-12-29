@@ -22,8 +22,8 @@
 	    <section id="cv_intro">
 	        <h2>Sophie Blanchard</h2>
 		    <h3>Développeuse web</h3>
-		    <p>Initialement cheffe de projets culturels, je suis passionnée par la programmation.</p>
-            <p>J'ai choisi de me réorienter dans le domaine digital afin de m'épanouir dans un métier technique, exigeant et évolutif.</p>
+		    <p>Initialement cheffe de projets culturels, je suis passionnée par la programmation.
+				<br />J'ai choisi de me réorienter dans le domaine digital afin de m'épanouir dans un métier technique, exigeant et évolutif.</p>
 	    </section>
 	</section>
 	

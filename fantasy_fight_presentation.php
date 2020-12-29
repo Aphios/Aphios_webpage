@@ -21,7 +21,7 @@
 	
 		<section>
 			<article>
-				<h1>Présentation du projet <br />Fantasy Fight</h1>
+				<h1>Présentation du projet Fantasy Fight</h1>
 				<p><em>Fantasy Fight</em> est mon <mark>premier projet</mark> autonome. Il s'agit d'un jeu de combat
 					old-school développé avec Python 3 et Pygame entre mars et mai 2019. On y incarne un héros de fantasy devant gagner gloire 
 					et fortune en combattant de multiples ennemis.</p>
