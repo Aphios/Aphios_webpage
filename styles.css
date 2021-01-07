@@ -183,7 +183,6 @@ aside a{
 	text-align:center;
 	margin-top:0.4em;
 	position:relative;	
-	/* flex: 1 1 auto; */
 }
 
 .menu li:before{
@@ -263,13 +262,14 @@ footer{
 }
 
 /*Fantasy fight presentation */
+
 .miniature{
 	width:50%;
 	height:auto;
 }
 
 figure img{
-	width:50%;
+	width:100%;
 	height:auto;
 }
 
@@ -281,8 +281,8 @@ figcaption{
 	font-family: "Neris light";
 	font-size: 0.9em;
 	text-align:center;
-	width:50%;
-	height:auto;
+	/*width:50%;
+	height:auto;*/
 }
 
 #lightbox{
@@ -377,7 +377,7 @@ legend {
 }
 
 textarea{
-	width:60em;
+	width:80%;
 	height:20em;
 }
 
@@ -452,7 +452,7 @@ hr:after{
 }
 
 #cv_left p{
-	font-size:1em;
+	font-size: 1rem;
 }
 
 #cv_right{
@@ -479,7 +479,7 @@ hr:after{
 #cv_right p{
 	margin-top:0.2em;
 	margin-bottom : 1em;
-	font-size:1em;
+	font-size:1rem;
 }
 #cv_top{
 	display:flex;
@@ -510,9 +510,179 @@ hr:after{
 
 #cv_intro p{
 	font-style:oblique;
-	font-size:0.9em;
+	font-size:0.9rem;
 	margin-top : 0.2em;
 	margin-bottom: 0.5em;
 	
 }
 
+/* Ecran de moins de 1275 px de large */
+
+@media screen and (max-width: 1275px){	
+    textarea{height:15em;}
+
+}
+
+/* Ecran de moins de 1110xpx de large */
+
+@media screen and (max-width: 1110px){
+	.sous_menu{left:2.5em;}
+}
+
+/* Ecran de moins de 900px de large */
+
+@media screen and (max-width: 900px){
+
+	body{font-size: 14px;}
+
+	.sous_menu{
+		left:2em;
+		padding-left: 1.2em;
+	}
+
+	.sous_menu li{font-size: 1rem;}
+
+	aside a{font-size: 0.8rem;}
+
+	aside ul li{font-size: 0.8rem;}
+
+	ul li::before{font-size: 0.9rem;}
+
+	h1{font-size: 2.2rem;}
+
+	h2{
+		font-size: 1.4rem;
+		margin-bottom: 0.5em;
+	}
+
+	h3{font-size: 1.1rem;}
+
+	#cv_body{
+		flex-direction: column;
+		align-content: center;
+		width:100%;
+	}
+
+	#cv_left, #cv_right{
+		width:80%;
+		padding: 1em;
+		margin:auto;
+	}
+
+	#cv_right{text-align: center;}
+
+	#cv_left{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		justify-items: center;
+	}
+
+}
+
+/* Ecran de moins de 750px de large */
+
+@media screen and (max-width: 750px){
+	textarea{height:10em;}
+	
+	.banniere{display: none;}
+
+	section{display: block;}
+
+	body{
+		font-size: 13px;
+		min-width: 400px;
+		margin: auto;
+		text-align: center;
+	}
+
+	h1{font-size: 2rem;}
+
+	h2{font-size: 1.2rem;}
+
+	h3{font-size: 1rem;}
+
+	.titre{font-size: 2.5rem;}
+
+	aside a{font-size: 0.7rem;}
+
+	aside ul li{font-size: 0.7rem;}
+	
+	.menu{
+		display:block;
+		padding-top: 0.4em;
+	    padding-bottom: 0.4em;
+	}
+	
+	.menu li{
+		width:auto;
+		text-align:center;
+		position:static;
+		padding-bottom: 0.5em;
+	}
+			
+	nav {
+		width:50%;
+		height:auto;
+		border-radius: 5em;
+		margin: auto;
+	}
+	
+	.sous_menu{
+		display:block;
+	    position: static;
+		width: auto;
+		padding: 0;
+		border-radius: 0;
+	}
+	
+	nav > ul li:hover .sous_menu{display: block;}
+
+	.sous_menu li{
+		text-align: center;
+		font-size: 1rem;
+		width:100%;
+		padding: 0;
+		border: none;
+	}
+
+	#inner{width:100%;}
+
+	#en-tete{
+		justify-content: center;
+	}
+
+	.menu li a, .sous_menu li a{margin: auto;}
+
+	.miniature, figcaption{margin:auto;}
+
+	#cv_intro{
+		margin-left: 2em;
+		text-align: left;
+	}
+
+	#cv_intro h2{font-size:1.8rem;}
+
+	#cv_intro h3{font-size:1.4rem}
+
+}
+
+/* Ecrans de moins de 500 px */
+
+@media screen and (max-width: 500px){
+	#cv_top{display:block;}
+
+	#cv_intro{
+		margin-left: 1em;
+		padding-top:0.5em;
+	}
+
+	#cv_intro h2{margin-top:0em;}
+
+	#lettrine{
+		text-align: left;
+	}
+
+	hr{margin-top:1.2rem;}
+
+}

@@ -42,6 +42,28 @@
 					ce fichier</a> et de l'exécuter en double-cliquant dessus.</p>
 				<p>Une version anglaise est aussi disponible <a href="https://github.com/Aphios/Fantasy_fight/blob/master/fantasy_fight_en.zip" target="blank">
 					ici.</a></p>
+
+				<section id="galerie">
+					<figure class="miniature">
+							<img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
+							<figcaption>Screenshots du jeu Fantasy Fight</figcaption>
+					</figure>
+
+				</section>
+
+				<div id="lightbox">
+					<div id="diaporama">
+						<span id="quit">&times;</span>
+						<img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
+						<img src="Images/ce_ff_003.png" alt="Image du jeu Fantasy Fight" />
+						<img src="Images/ce_ff_004.png" alt="Image du jeu Fantasy Fight" />
+						<div id="controls">
+							<span id="previous">&#10094;</span>
+							<span id="next">&#10095;</span>
+						</div>
+					</div>	
+				</div>
+				
 			</article>
 		
 			<aside>
@@ -54,27 +76,6 @@
 			</aside>
 		
 		</section>
-
-		<section id="galerie">
-			<figure class="miniature">
-				<img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
-				<figcaption>Screenshots du jeu Fantasy Fight</figcaption>
-			</figure>
-
-		</section>
-
-		<div id="lightbox">
-			<div id="diaporama">
-				<span id="quit">&times;</span>
-				<img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
-				<img src="Images/ce_ff_003.png" alt="Image du jeu Fantasy Fight" />
-				<img src="Images/ce_ff_004.png" alt="Image du jeu Fantasy Fight" />
-				<div id="controls">
-					<span id="previous">&#10094;</span>
-					<span id="next">&#10095;</span>
-				</div>
-			</div>	
-		</div>
 
     </div>
 			

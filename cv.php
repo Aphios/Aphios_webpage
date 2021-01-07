@@ -18,7 +18,7 @@
 	</nav>
 	
 	<section id="cv_top">
-	    <section><h1>CV</h1></section>
+	    <section id="lettrine"><h1>CV</h1></section>
 	    <section id="cv_intro">
 	        <h2>Sophie Blanchard</h2>
 		    <h3>Développeuse web</h3>
@@ -69,7 +69,8 @@
 		       <ul>
 		           <li>HTML & CSS</li>
 			       <li>PHP</li>
-			       <li>MySQL</li>
+				   <li>MySQL</li>
+				   <li>JavaScript</li>
 			       <li>Python</li>
 			       <li>Wordpress</li>
 			       <li>Java</li>
