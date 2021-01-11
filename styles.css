@@ -516,6 +516,21 @@ hr:after{
 	
 }
 
+.progress-bar-1, .progress-bar-2, .progress-bar-3{
+	height: 0.8em;
+	border-radius:0.3em;
+	background: linear-gradient(0.25turn, #360465, #bc007d);
+	color:rgba(255, 255, 255, 0);
+	font-size: 0.5rem;
+	margin-left: 2em;
+}
+
+.progress-bar-1{padding-left:3em;}
+
+.progress-bar-2{padding-left:5em;}
+
+.progress-bar-3{padding-left:8em;}
+
 /* Ecran de moins de 1275 px de large */
 
 @media screen and (max-width: 1275px){	
@@ -663,7 +678,11 @@ hr:after{
 
 	#cv_intro h2{font-size:1.8rem;}
 
-	#cv_intro h3{font-size:1.4rem}
+	#cv_intro h3{font-size:1.4rem;}
+
+	.progress-bar-1, .progress-bar-2, .progress-bar-3{
+		display:none;
+	}
 
 }
 

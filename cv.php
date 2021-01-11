@@ -67,17 +67,17 @@
 	        <article>
 		       <h3>Compétences professionnelles</h3>
 		       <ul>
-		           <li>HTML & CSS</li>
-			       <li>PHP</li>
-				   <li>MySQL</li>
-				   <li>JavaScript</li>
-			       <li>Python</li>
-			       <li>Wordpress</li>
-			       <li>Java</li>
-				   <li>Git</li>
-			       <li>Photoshop</li>
-			       <li>Indesign</li>
-			       <li>Scrum</li>
+		           <li>HTML & CSS<span class="progress-bar-3">***</span></li>
+			       <li>PHP<span class="progress-bar-3">***</span></li>
+				   <li>MySQL<span class="progress-bar-2"><**/span></li>
+				   <li>JavaScript<span class="progress-bar-3">***</span></li>
+			       <li>Python<span class="progress-bar-3">***</span></li>
+			       <li>Wordpress<span class="progress-bar-1">*</span></li>
+			       <li>Java<span class="progress-bar-2">**</span></li>
+				   <li>Git<span class="progress-bar-2">**</span></li>
+			       <li>Photoshop<span class="progress-bar-3">***</span></li>
+			       <li>Indesign<span class="progress-bar-3">***</span></li>
+			       <li>Scrum<span class="progress-bar-1">*</span></li>
 			    </ul>
 		    </article>
 			
