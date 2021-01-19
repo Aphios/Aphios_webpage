@@ -34,16 +34,28 @@ Par Sophie Blanchard
 	font-style:normal;
 }
 
+
+@keyframes balance{
+	0%{
+		transform :skew(0);
+	}
+
+	100%{
+		transform:skew(15deg, 15deg);
+	}
+}
+
 *{
 	box-sizing: border-box;
 }
+
+html{font-size: 16px;}
 
 body{
 	width: 100%;
 	max-width:1280px;
 	min-width:700px;
 	margin:auto;
-	font-size: 16px;
 }
 
 section{
@@ -155,16 +167,19 @@ aside a{
 	height:auto;
 	padding-top: 1.5em;
 	padding-right: 1.5em;
+	transform-origin: 10px 10px;
+	animation: balance 1.5s linear infinite alternate paused;
 }
 
-.banniere{
-	background-color: #989fff;
-}
+.logo img{border-radius:2px;}
 
-/*.banniere img{
-	width: 100%;
-	height: auto;
-}*/
+.logo:hover{animation-play-state: running;}
+
+.banniere{background-color: #989fff;}
+
+.banniere img{
+	width:100%;
+}
 
 /* Menu */
 
@@ -192,6 +207,11 @@ aside a{
 .menu a{
 	text-decoration:none;
 	color : #140454;
+	transition: text-shadow 300ms ease-out;
+}
+
+.menu a:hover{
+	text-shadow: 0px 0px 10px #FFFFFF;
 }
 
 nav {
@@ -216,6 +236,7 @@ nav > ul li:hover .sous_menu{
     display: flex;
     flex-flow: column wrap;
 }
+
 .sous_menu li{
 	text-align: left;
 	font-size: 1.1rem;
@@ -283,6 +304,53 @@ figcaption{
 	text-align:center;
 	/*width:50%;
 	height:auto;*/
+}
+
+.flex-line{
+	display:flex;
+	margin-bottom:2em;
+}
+
+.download{
+	border-radius:2em;
+	height:3em;
+	line-height:100%;
+	padding:1em;
+	margin-right: 1em;
+	text-align: center;
+	font-family: "Neris light";
+	font-size: 1rem;
+	display: inline-flex;
+	align-items: center;
+	font-weight:bolder;
+	position:relative;
+	z-index:1;
+	transition:transform 300ms;
+	background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(111,42,107,1) 100%);
+}
+
+.download a{color:#e6ccff;}
+
+.download:hover{
+	transform:scale(1.1);
+}
+
+.download::after{
+	content:"";
+	opacity:0;
+	transition:opacity 400ms;
+	border-radius:2em;
+	position:absolute;
+	z-index:-1;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background: linear-gradient(0deg, rgba(82,15,78,1) 0%, rgba(230,12,12,1) 100%); 
+}
+
+.download:hover::after{
+	opacity:1;
 }
 
 #lightbox{
@@ -367,13 +435,13 @@ form{
 
 label, legend, textarea, input {
 	font-family: "Neris light";
-	font-size: 1em;
+	font-size: 1rem;
 	margin:0.4em;
 	box-sizing: border-box;
 }
 
 legend {
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 textarea{
@@ -548,7 +616,7 @@ hr:after{
 
 @media screen and (max-width: 900px){
 
-	body{font-size: 14px;}
+	html{font-size: 14px;}
 
 	.sous_menu{
 		left:2em;
@@ -570,7 +638,9 @@ hr:after{
 		margin-bottom: 0.5em;
 	}
 
-	h3{font-size: 1.1rem;}
+	h3{font-size: 1.2rem;}
+
+	h4{font-size:1.1rem;}
 
 	#cv_body{
 		flex-direction: column;
@@ -604,18 +674,15 @@ hr:after{
 
 	section{display: block;}
 
+	html{font-size: 13px;}
+
 	body{
-		font-size: 13px;
 		min-width: 400px;
 		margin: auto;
 		text-align: center;
 	}
 
 	h1{font-size: 2rem;}
-
-	h2{font-size: 1.2rem;}
-
-	h3{font-size: 1rem;}
 
 	.titre{font-size: 2.5rem;}
 
@@ -684,6 +751,14 @@ hr:after{
 		display:none;
 	}
 
+	form{
+		width:85%;
+		margin:auto;
+		text-align: left;
+	}
+
+	legend{font-size:1.1rem;}
+
 }
 
 /* Ecrans de moins de 500 px */
@@ -703,5 +778,41 @@ hr:after{
 	}
 
 	hr{margin-top:1.2rem;}
+
+}
+
+/*Ecrans de moins de 400px */
+
+@media screen and (max-width: 400px){
+	footer{
+		flex-direction: column;
+		height: auto;
+	}
+
+	.categ_barre_inf{
+		text-align:left;
+		justify-content:flex-start;
+	}
+
+	html{
+		font-size:12px;
+	}
+
+	body{
+		text-align:left;
+		margin:10px;
+		min-width:200px;
+	}
+
+	#en-tete{
+		justify-content: left;
+	}
+
+	nav{
+		margin-left:10px;
+		margin-right:10px;
+	}
+
+	form{margin:0;}
 
 }

@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-	    <meta charset = "utf-8"/>
+		<meta charset = "utf-8"/>
+		<meta name="viewport" content="width=device-width initial-scale=1" />
 	    <link rel="stylesheet" type="text/css" href="styles.css" />
 	    <title>Fantasy Fight</title>
     </head>
@@ -38,10 +39,11 @@
 					du cahier des charges, planification des tâches, codage des classes, fonctions et coeur de programme, 
 					tests et gestion des versions via Git.</p>
 				<h2>Comment jouer ?</h2>
-				<p>Il vous suffit de télécharger <a href="https://github.com/Aphios/Fantasy_fight/blob/master/Fantasy_fight_fr.7z" target="blank">
-					ce fichier</a> et de l'exécuter en double-cliquant dessus.</p>
-				<p>Une version anglaise est aussi disponible <a href="https://github.com/Aphios/Fantasy_fight/blob/master/fantasy_fight_en.zip" target="blank">
-					ici.</a></p>
+				<p>Il vous suffit de télécharger la version française ou anglaise en cliquant ci-dessous et d'exécuter le fichier en double-cliquant dessus.</p>
+				<div class="flex-line">
+					<button type="button" class="download"><a href="https://github.com/Aphios/Fantasy_fight/blob/master/Fantasy_fight_fr.7z" target="blank">Jeu en français</a></button>
+					<button type="button" class="download"><a href="https://github.com/Aphios/Fantasy_fight/blob/master/fantasy_fight_en.zip" target="blank">Jeu en anglais</a></button>
+				</div>
 
 				<section id="galerie">
 					<figure class="miniature">
