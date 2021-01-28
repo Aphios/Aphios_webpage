@@ -85,7 +85,7 @@
 		<?php include("bas_page.php"); ?>
 	</footer>
 	
-	<script src="ff_lightbox.js"></script>
+	<script src="app.js"></script>
 				    
     </body>
 </html>

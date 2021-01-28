@@ -45,11 +45,17 @@ Par Sophie Blanchard
 	}
 }
 
-*{
-	box-sizing: border-box;
-}
+*{box-sizing: border-box;}
 
-html{font-size: 16px;}
+html{
+	font-size: 16px;
+	--primaryBlue : #140454;
+	--primaryPink : #bc007d;
+	--primaryGrey: #e8e8e8;
+	--secondaryBlue : #360465;
+	--secondaryGrey : #e6ccff;
+	--secondaryPink : #591d39;
+}
 
 body{
 	width: 100%;
@@ -65,7 +71,7 @@ section{
 h1{
 	font-family:"Rothenburg";
 	font-size: 2.5rem;
-	color: #140454;
+	color: var(--primaryBlue);
 	margin-bottom: 0.5rem;
 }
 
@@ -97,19 +103,19 @@ ul li{
 
 ul li:before {
 	content: "- ";
-    color: #140454;
+    color: var(--primaryBlue);
     font-size: 1.2rem;
 	font-family:"Rothenburg";
 }
 
 a {
 	text-decoration:none;
-	color:#140454;
+	color: var(--primaryBlue);
 }
 
 a:visited {
 	text-decoration:none;
-	color: #bc007d;
+	color: var(--primaryPink);
 	font-style: italic;
 }
 
@@ -133,7 +139,7 @@ article{
 
 
 aside {
-	background-color : #e8e8e8;
+	background-color : var(--primaryGrey);
 	min-width:25%;
 	border-radius: 0.3em;
 	margin-top : 2.5em;
@@ -147,7 +153,7 @@ aside p{
 aside a{
 	font-size:0.9rem;
 	text-decoration:none;
-	color:#140454;
+	color: var(--primaryBlue);
 }
 
 /* En-tête */
@@ -160,7 +166,7 @@ aside a{
 .titre{
 	font-family:"Rothenburg";
 	font-size: 3.2rem;
-    color: #140454;
+    color: var(--primaryBlue);
 }
 
 .logo{
@@ -193,7 +199,7 @@ aside a{
 .menu li{
 	font-family: "Neris semibold italic";
 	font-size : 1.2rem;
-	color : #140454;
+	color : var(--primaryBlue);
 	width:100%;
 	text-align:center;
 	margin-top:0.4em;
@@ -206,7 +212,7 @@ aside a{
 	
 .menu a{
 	text-decoration:none;
-	color : #140454;
+	color : var(--primaryBlue);
 	transition: text-shadow 300ms ease-out;
 }
 
@@ -252,7 +258,7 @@ nav > ul li:hover .sous_menu{
 /* Bas de page */
 
 footer{
-	background-color: #e8e8e8;
+	background-color: var(--primaryGrey);
 	display: flex;
 	margin-top:1.2em;
 	width:100%;
@@ -302,8 +308,6 @@ figcaption{
 	font-family: "Neris light";
 	font-size: 0.9em;
 	text-align:center;
-	/*width:50%;
-	height:auto;*/
 }
 
 .flex-line{
@@ -329,7 +333,7 @@ figcaption{
 	background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(111,42,107,1) 100%);
 }
 
-.download a{color:#e6ccff;}
+.download a{color: var(--secondaryGrey);}
 
 .download:hover{
 	transform:scale(1.1);
@@ -377,6 +381,8 @@ figcaption{
 	align-items: center;
 	width:700px;
 	height:600px;
+	padding-top:5px;
+	padding-bottom:5px;
 }
 
 #diaporama img{
@@ -412,6 +418,7 @@ figcaption{
 
 #quit{
 	align-self:flex-end;
+	margin-top: 5px;
 }
 
 #quit:hover, #next:hover, #previous:hover{
@@ -424,12 +431,13 @@ figcaption{
 	flex-direction: row;
 	justify-content: space-between;
 	width:700px;
+	margin-bottom: 5px;
 }
 
 /*Contact */
 
 form{
-	background-color: #e6ccff;
+	background-color: var(--secondaryGrey);
 	border-radius:0.5rem;
 }
 
@@ -451,7 +459,7 @@ textarea{
 
 input[type=submit] {
 	font-weight:bold;
-	color:#591d39;
+	color: var(--secondaryPink);
 }
 
 #nom {
@@ -465,7 +473,7 @@ input[type=submit] {
 .msg_form {
 	text-align:center;
 	font-size:1.2em;
-	color:#591d39;
+	color: var(--secondaryPink);
 	margin : 1em;
 }
 
@@ -473,7 +481,7 @@ input[type=submit] {
 
 hr{
 	border: none;
-	border-top: 0.1em inset #bc007d;
+	border-top: 0.1em inset var(--primaryPink);
 	width:80%;
 	height: 1em;
 	overflow:visible;
@@ -503,7 +511,7 @@ hr:after{
 }
 
 #cv_left{
-	background-color:#e6ccff;
+	background-color: var(--secondaryGrey);
 	border-radius:1em;
 	padding:1em 1em 1em 2.5em;
 	width:30%;
@@ -540,7 +548,7 @@ hr:after{
 
 #cv_right h4{
 	font-family: "Neris light";
-	color:#360465;
+	color:var(--secondaryBlue);
 	margin-bottom:0em;
 	margin-top:0.5em;
 }
@@ -563,13 +571,13 @@ hr:after{
 
 #cv_intro h2{
 	font-size:2em;
-	color: #140454;
+	color: var(--primaryBlue);
 	margin-bottom : 0.4em;
 	margin-top: 0.5em;
 }
 
 #cv_intro h3{
-	color :#360465;
+	color : var(--secondaryBlue);
 	font-size:1.5em;
 	margin-bottom : 0.5em;
 	margin-top:0em;
@@ -587,7 +595,7 @@ hr:after{
 .progress-bar-1, .progress-bar-2, .progress-bar-3{
 	height: 0.8em;
 	border-radius:0.3em;
-	background: linear-gradient(0.25turn, #360465, #bc007d);
+	background: linear-gradient(0.25turn, var(--secondaryBlue), var(--primaryPink));
 	color:rgba(255, 255, 255, 0);
 	font-size: 0.5rem;
 	margin-left: 2em;
@@ -759,6 +767,31 @@ hr:after{
 
 	legend{font-size:1.1rem;}
 
+	#diaporama{
+		width: 450px;
+		height:385px;
+	}
+
+	#diaporama img.active{border-width:3px;}
+
+	#quit, #previous, #next{
+		width:25px;
+		height:25px;
+		line-height: 25px;
+		font-size: 15px;
+	}
+
+	#quit{margin-bottom:5px;}
+
+	#controls{
+		width:450px;
+		margin-top:5px;
+	}
+
+	.flex-line{
+		justify-content: space-evenly;
+	}
+
 }
 
 /* Ecrans de moins de 500 px */
@@ -778,6 +811,19 @@ hr:after{
 	}
 
 	hr{margin-top:1.2rem;}
+
+	#diaporama{
+		width:325px;
+		height:280px;
+	}
+
+	#diaporama img.active{
+		border-width:3px;
+	}
+
+	#controls{
+		width:325px;
+	}
 
 }
 
