@@ -11,11 +11,11 @@
     <body>
 	
 	<header>
-	     <?php include("en_tete.php"); ?>
+	     <?php require("en_tete.php"); ?>
 	</header>
 	
 	<nav>
-		<?php include("menu.php"); ?>
+		<?php require("menu.php"); ?>
 	</nav>
 
 	<div id="inner">
@@ -41,8 +41,8 @@
 				<h2>Comment jouer ?</h2>
 				<p>Il vous suffit de télécharger la version française ou anglaise en cliquant ci-dessous et d'exécuter le fichier en double-cliquant dessus.</p>
 				<div class="flex-line">
-					<button type="button" class="download"><a href="https://github.com/Aphios/Fantasy_fight/blob/master/Fantasy_fight_fr.7z" target="blank">Jeu en français</a></button>
-					<button type="button" class="download"><a href="https://github.com/Aphios/Fantasy_fight/blob/master/fantasy_fight_en.zip" target="blank">Jeu en anglais</a></button>
+					<button type="button" class="download"><a href="Files/Fantasy_fight_fr.7z" download="Fantasy Fight_français">Jeu en français</a></button>
+					<button type="button" class="download"><a href="Files/fantasy_fight_en.zip" download="Fantasy Fight_english">Jeu en anglais</a></button>
 				</div>
 
 				<section id="galerie">
@@ -82,7 +82,7 @@
     </div>
 			
 	<footer>
-		<?php include("bas_page.php"); ?>
+		<?php require("bas_page.php"); ?>
 	</footer>
 	
 	<script src="app.js"></script>

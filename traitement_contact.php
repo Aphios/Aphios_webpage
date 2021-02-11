@@ -7,36 +7,122 @@
     </head>
 <body>
     <header>
-	    <?php include("en_tete.php"); ?>
+	    <?php require("en_tete.php"); ?>
     </header>
 	
 	<nav>
-	    <?php include("menu.php"); ?>
+	    <?php require("menu.php"); ?>
 	</nav>
 
 	<div id="inner">
 	
-<!-- TODO Base de données :
-- Créer  le lien vers la bdd locale aphios_web_contacts
-- Récupérer et vérifier les données du formulaire (créer une fonction estPrésente et une fonction estValide)
-- Si les données [nom, prenom,] mail existent et sont valides mais ne sont pas dans la base, insérer nouvelle ligne dans Personnes
-- Si dans Personnes le mail existe déjà, faire un simple update du nom et du prénom (s'ils ont été renseignés)
-- Si les données [nature demande], message existent et sont valides, insérer une nouvelle ligne dans Messages
-- Afficher le message déjà écrit ci-dessous + "votre message n°{messages.id} a bien été enregistré"
--->
 
 <?php
-    if (isset($_POST['prenom']) and (strlen($_POST['prenom'])>0)){
-		echo "<p class='msg_form'>Bonjour ".htmlspecialchars($_POST['prenom']).", votre message a bien été transmis 
-		et sera traité dans les plus brefs délais.</p>";
-	} else {
-		echo "<p class='msg_form'>Bonjour, votre message a bien été transmis et sera traité dans les plus brefs délais.</p>";
+
+	// Connexion BDD
+	try{
+    	$bdd = new PDO('mysql:host=localhost;dbname=aphios_website_contacts;charset=utf8', 'root', 'root', 
+        	array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	}catch(Exception $e){
+    	die('Erreur : ' . $e->getMessage());
 	}
+
+	// Fonctions
+	function getData($data, $maxlen){
+		if(isset($data) and !empty($data) and strlen($data) <= $maxlen){
+			return $data;
+		}else{
+			return null;
+		}
+	}
+
+	// Récupération et vérification des données
+	$nom = getData($_POST['nom'], 50);
+	$prenom = getData($_POST['prenom'], 50);
+	$mail = getData($_POST['mail'], 80);
+	if(!preg_match("#^[\w_.-]+@[\w_-]+\.[a-z]{1,10}$#iU", $mail)){
+	// same as if(!filter_var($mail, FILTER_VALIDATE_EMAIL))
+		$mail = null;
+	}
+	$msg = getData($_POST['message'], 3000);
+	$demande = null;
+	if(isset($_POST['demande']) and !empty($_POST['demande'])){
+		if($_POST['demande'] === "site" or $_POST['demande'] === "projets" or $_POST['demande'] === "pro"){
+			$demande = $_POST['demande'];
+		}
+	}
+
+	// Requêtes
+	$getUserInfoFromMail = $bdd->prepare('SELECT Id, Nom, Prenom FROM personnes WHERE Mail = ?');
+	$updateName = $bdd->prepare('UPDATE personnes SET Nom=:nom WHERE Id=:idUser');
+	$updateSurname = $bdd->prepare('UPDATE personnes SET Prenom=:prenom WHERE Id=:idUser');
+	$addUser = $bdd->prepare('INSERT INTO personnes(Nom, Prenom, Mail) VALUES(:nom, :prenom, :mail)');
+	$addMsg = $bdd->prepare('INSERT INTO messages(Id_personne, Nature_demande, Message, Date) VALUES(:idUser, :demande, :msg, now())');
+	$getMsgId = $bdd->prepare('SELECT Id FROM messages WHERE Id_personne =:idUser AND Message=:msg');
+
+	// Envoi à la bdd
+	// Si on a le $mail :
+	if($mail){
+		// Enregistrement des données sur la personne
+		$getUserInfoFromMail->execute(array($mail));
+		$userInfo = $getUserInfoFromMail->fetch();
+		$getUserInfoFromMail->closeCursor();
+		if(!$userInfo){
+			$addUser->execute(array('nom'=>$nom, 'prenom'=>$prenom, 'mail'=>$mail));
+			$addUser->closeCursor();
+			$getUserInfoFromMail->execute(array($mail));
+			$userInfo = $getUserInfoFromMail->fetch();
+			$getUserInfoFromMail->closeCursor();
+		}
+		$idUser = $userInfo['Id'];
+		// Mise à jour des données de la personne
+		if($nom and $userInfo['Nom'] != $nom){
+			$updateName->execute(array('nom'=>$nom, 'idUser'=>$idUser));
+			$updateName->closeCursor();
+		}
+		if ($prenom and $userInfo['Prenom'] != $prenom){
+			$updateSurname->execute(array('prenom'=>$prenom, 'idUser'=>$idUser));
+			$updateSurname->closeCursor();	
+		}
+		if($msg){
+			//Enregistrement du message
+			$addMsg->execute(array('idUser'=>$idUser, 'demande'=>$demande, 'msg'=>$msg));
+			$addMsg->closeCursor();
+			$getMsgId->execute(array('idUser'=>$idUser, 'msg'=>$msg));
+			$noMsg = $getMsgId->fetch();
+			$noMsg = $noMsg['Id'];
+			$getMsgId->closeCursor();
+		} 
+	}
+
+	// Affichage du message à l'utilisateur
+    if($mail and $msg and $noMsg){
+		if($prenom){
+			echo "<p class='msg_form'>Bonjour" . htmlspecialchars($prenom) . "</p>";
+		}else{
+			echo "<p class='msg_form'>Bonjour</p>";
+		}
+		echo "<p class='msg_form'>Votre message a bien été enregistré sous le numéro " . htmlspecialchars($noMsg) . " et sera traité dans les plus brefs délais. Une copie de votre message vient également de vous être adressée par mail.</p>";
+		$autoMail = wordwrap($msg, 70, "\r\n");
+		$mailHeaders = "From: aphios.web@gmail.com\r\nReply-To: aphios.web@gmail.com\r\nX-Mailer: PHP".phpversion();
+		$headers = array(
+			'From' => 'aphios.web@gmail.com',
+			'Reply-To' => 'aphios.web@gmail.com',
+			'Content-Type' => 'text/plain; charset=utf-8',
+			'X-Mailer' => 'PHP/' . phpversion()
+		);
+		// Décommenter quand le site sera hébergé :
+		//mail($mail, 'Message envoyé à Aphios Web', $autoMail, $headers);
+		//mail('aphios.web@gmail.com', 'Mail automatique Aphios Website', 'Un nouveau contenu a été enregistré dans la base de données.');
+	}else{
+		echo "<p class='msg_form'>Bonjour, votre message n'a pu être transmis. Vérifiez que vous avez bien renseigné un email et un message corrects.</p>";
+	}
+
 ?>
     </div>
 
     <footer>
-		<?php include("bas_page.php"); ?>
+		<?php require("bas_page.php"); ?>
     </footer>
 </body>
 </html>

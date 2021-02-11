@@ -11,17 +11,16 @@
 	<body>
 	
 	<header>
-	    <?php include("en_tete.php"); ?>
+	    <?php require("en_tete.php"); ?>
 	</header>
 	
 	<nav>
-	    <?php include("menu.php"); ?>
+	    <?php require("menu.php"); ?>
 	</nav>
 
 	<div id="inner">
 	
 		<h1>Contact</h1>
-		<h2>Cette page est en construction, formulaire actuellement inopérant.</h2>
 		
 		<form method="post" action="traitement_contact.php">
 			<fieldset>
@@ -36,7 +35,7 @@
 				</p>
 				<p>
 				<label for="mail">Votre email :</label>
-				<input type="email" name="mail" id="mail" required />
+				<input type="email" name="mail" id="mail" required maxlength="80" />
 				</p>
 			</fieldset>
 			<fieldset>
@@ -50,7 +49,7 @@
 			</fieldset>
 			<fieldset>
 				<legend>Votre message</legend>
-				<textarea name="message" id="message" required >Entrez votre message ici.</textarea>       
+				<textarea name="message" id="message" required maxlength="3000">Entrez votre message ici (3000 caractères max).</textarea>       
 			</fieldset>
 			<input type="submit" value="Envoyer" />
 		</form>
@@ -58,7 +57,7 @@
 	</div>
 	
 	<footer>
-	    <?php include("bas_page.php"); ?>
+	    <?php require("bas_page.php"); ?>
 	</footer>
 	
 	</body>

@@ -11,11 +11,11 @@
     <body>
 	
 	<header>
-	     <?php include("en_tete.php"); ?>
+	     <?php require("en_tete.php"); ?>
 	</header>
 	
 	<nav>
-		<?php include("menu.php"); ?>
+		<?php require("menu.php"); ?>
 	</nav>
 
 	<div id="inner">
@@ -31,7 +31,12 @@
 				des polices, sont de ma main.</p>
 				<h2>Retrouver le code source</h2>
 				<p>L'ensemble des étapes du projet et le code source des pages du site est consultable sur 
-				<a href="https://github.com/Aphios/Aphios_website" target="blank">ma page Github.</a></p>	
+				<a href="https://github.com/Aphios/Aphios_website" target="blank">ma page Github.</a></p>
+				<h2>Enseignements et améliorations</h2>
+				<p>Avec le recul, je me suis bien sûr aperçue de nombreux défauts tant dans la méthodologie que dans l'architecture du site.</p>
+				<p>Si je devais refaire le site, je m'appuierais ainsi sur des méthodologies précises telles que BEM pour avoir un CSS plus lisible et lié à la sémantique. J'emploierais aussi un préprocesseur tel que Sass pour me faciliter la rédaction du css.</p>
+				<p>Néanmoins, ce site n'est qu'un premier projet et a le mérite de m'avoir donné envie de continuer à expérimenter et à m'améliorer.</p>
+
 			</article>
 			
 			<aside>
@@ -47,7 +52,7 @@
 	</div>
 	
 	<footer>
-		<?php include("bas_page.php"); ?>
+		<?php require("bas_page.php"); ?>
     </footer>
 				    
     </body>

@@ -9,11 +9,11 @@
     
 	<body>
 	    <header>
-	        <?php include("en_tete.php"); ?>
+	        <?php require("en_tete.php"); ?>
 	    </header>
 	
 	    <nav>
-	        <?php include("menu.php"); ?>
+	        <?php require("menu.php"); ?>
 		</nav>
 		
 		<div id="inner">
@@ -28,7 +28,7 @@
        </div>
 		
 		<footer>
-	        <?php include("bas_page.php"); ?>
+	        <?php require("bas_page.php"); ?>
 	    </footer>
 		
 	</body>
