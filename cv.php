@@ -18,7 +18,7 @@
 	    <?php require("menu.php"); ?>
 	</nav>
 	
-	<section id="cv_top">
+	<section id="cv_top" role="region" aria-label="CV introduction">
 	    <section id="lettrine"><h1>CV</h1></section>
 	    <section id="cv_intro">
 	        <h2>Sophie Blanchard</h2>
@@ -30,9 +30,9 @@
 	
 	<hr>
 	
-    <section id="cv_body">
+    <section id="cv_body" role="region" aria-label="CV contenu">
 	
-	    <section id="cv_left">
+	    <section id="cv_left" role="region" aria-label="contact et compétences personnelles">
 	        <article>
 		        <h3>Contact</h3>
 		    	<p><a href="mailto:aphios.web@gmail.com">aphios.web@gmail.com</a></p>
@@ -58,26 +58,28 @@
 		
 		    <article>
 		        <h3>Réalisations personnelles</h3>
-			    <p><a href="https://labyrintheque.wordpress.com">Blog La Labyrinthèque</a></p>
-			    <p><a href="https://github.com/Aphios">Page Github</a></p>
+			    <p><a href="https://github.com/Aphios/Fantasy_fight">Mini-jeu développé en Python</a></p>
+				<p><a href="https://github.com/Aphios/KidzFastplay">Site internet de jeux interactifs pour enfants</a></p>
+				<p><a href="https://github.com/Aphios/Aphios_website">Site personnel Aphios website</a></p>
+				<p><a href="https://labyrintheque.wordpress.com">Blog personnel La Labyrinthèque</a></p>
 		    </article>
 	
 	    </section>
 	
-	    <section id="cv_right">
+	    <section id="cv_right" role="region" aria-label="expérience professionnelle et formation">
 	        <article>
 		       <h3>Compétences professionnelles</h3>
 		       <ul>
 		           <li>HTML & CSS<span class="progress-bar-3">***</span></li>
 			       <li>PHP<span class="progress-bar-3">***</span></li>
-				   <li>MySQL<span class="progress-bar-2"><**/span></li>
+				   <li>MySQL<span class="progress-bar-2">**</span></li>
 				   <li>JavaScript<span class="progress-bar-3">***</span></li>
 			       <li>Python<span class="progress-bar-3">***</span></li>
-			       <li>Wordpress<span class="progress-bar-1">*</span></li>
 			       <li>Java<span class="progress-bar-2">**</span></li>
 				   <li>Git<span class="progress-bar-2">**</span></li>
-			       <li>Photoshop<span class="progress-bar-3">***</span></li>
-			       <li>Indesign<span class="progress-bar-3">***</span></li>
+			       <li>Suite Adobe<span class="progress-bar-2">**</span></li>
+				   <li>React.js<span class="progress-bar-1">*</span></li>
+				   <li>Symfony<span class="progress-bar-1">*</span></li>
 			       <li>Scrum<span class="progress-bar-1">*</span></li>
 			    </ul>
 		    </article>
@@ -114,6 +116,8 @@
 	<footer>
 	    <?php require("bas_page.php"); ?>
 	</footer>
+
+	<script src="aria_dropdown_menu.js"></script>
 	
 	</body>
 	

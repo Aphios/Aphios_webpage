@@ -238,7 +238,7 @@ nav {
 	border-radius: 0.3em;
 }
 
-nav > ul li:hover .sous_menu{
+.deroulant:hover .sous_menu, .deroulant.ouvert .sous_menu{
     display: flex;
     flex-flow: column wrap;
 }
@@ -252,6 +252,21 @@ nav > ul li:hover .sous_menu{
 	border-bottom-style:solid;
 	border-bottom-width:0.1em;
 	border-bottom-color:#4e24f5;
+}
+
+.visually-hidden{
+	display:none;
+}
+
+.fleche-bas:after{
+	content:'';
+	border-top: 7px solid var(--primaryGrey);
+	border-right: 7px solid #989fff;
+	border-left: 7px solid #989fff;
+	margin-left: 5px;
+	position:relative;
+	top: 10px;
+	left: 0px;
 }
 
 
@@ -726,7 +741,7 @@ hr:after{
 		border-radius: 0;
 	}
 	
-	nav > ul li:hover .sous_menu{display: block;}
+	.deroulant:hover .sous_menu{display: block;}
 
 	.sous_menu li{
 		text-align: center;

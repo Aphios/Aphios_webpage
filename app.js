@@ -52,26 +52,3 @@ function handleKey(ev){
         exit();
     }
 }
-
-/*
-next.addEventListener("click", function(){
-    diapos[index].classList.remove("active");
-    index += 1;
-    if(index > (diapos.length - 1)){
-        index = 0
-    }
-    diapos[index].classList.add("active");
-});
-
-previous.addEventListener("click", function(){
-    diapos[index].classList.remove("active");
-
-    diapos[index].classList.add("active");
-});
-
-quit.addEventListener("click", function(){
-    diapos[index].classList.remove("active");
-    index = 0;
-    lb.classList.remove("active");
-});
-*/

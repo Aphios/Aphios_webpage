@@ -54,6 +54,8 @@
 	<footer>
 		<?php require("bas_page.php"); ?>
     </footer>
+
+	<script src="aria_dropdown_menu.js"></script>
 				    
     </body>
 </html>

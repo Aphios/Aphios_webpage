@@ -26,7 +26,7 @@
 		<h2>Mentions relatives à l'utilisation des cookies</h2>
 		<p>Ce site ne fait aucune utilisation de cookies.</p>
 		<h2>Mentions relatives à l'utilisation de données personnelles</h2>
-		<p>Les traitements des données à caractère personnel collectées à partir de ce site ont pour seuls finalités la constitution
+		<p>Les traitements des données à caractère personnel collectées à partir de ce site ont pour seules finalités la constitution
 		d'un fichier d'adresses à des fins d'information et de communication en rapport avec le site, à l'exclusion de toute
 		sollicitation commerciale.</p>
 		<p>Conformément à la délibération de la Commission Nationale Informatique et Libertés n°2006-138 du 9 mai 2006, ces traitements
@@ -40,6 +40,8 @@
 	<footer>
 	    <?php require("bas_page.php"); ?>
 	</footer>
+
+	<script src="aria_dropdown_menu.js"></script>
 	
 	</body>
 	

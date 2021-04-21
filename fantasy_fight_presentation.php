@@ -53,7 +53,7 @@
 
 				</section>
 
-				<div id="lightbox">
+				<div id="lightbox" aria-hidden="true">
 					<div id="diaporama">
 						<span id="quit">&times;</span>
 						<img src="Images/ce_ff_002.png" alt="Image du jeu Fantasy Fight" />
@@ -86,6 +86,7 @@
 	</footer>
 	
 	<script src="app.js"></script>
+	<script src="aria_dropdown_menu.js"></script>
 				    
     </body>
 </html>
