@@ -113,7 +113,7 @@
 		);
 		// Décommenter quand le site sera hébergé :
 		//mail($mail, 'Message envoyé à Aphios Web', $autoMail, $headers);
-		//mail('aphios.web@gmail.com', 'Mail automatique Aphios Website', 'Un nouveau contenu a été enregistré dans la base de données.');
+		//mail('aphios.web@gmail.com', 'Mail automatique Aphios Website', 'Un nouveau contenu a été enregistré dans la base de données.', $headers);
 	}else{
 		echo "<p class='msg_form'>Bonjour, votre message n'a pu être transmis. Vérifiez que vous avez bien renseigné un email et un message corrects.</p>";
 	}
